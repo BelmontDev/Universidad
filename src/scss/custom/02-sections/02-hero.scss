@@ -1,0 +1,160 @@
+.hero{
+  padding: 50px 0;
+  height: 93vh;
+  display: flex;
+  align-items: center;
+
+  .hero-row{
+    @include adyacent-top(30px);
+    display: flex;
+    flex-wrap: wrap;
+
+    .hero-text{
+      @include adyacent-top(20px);
+
+      .hero-title{
+        @include adyacent-top(5px);
+
+        p{
+          @include rem-2(22, 29);
+          color: $tertiary;
+          font-weight: 400;
+        }
+
+        h1{
+          @include rem-2(58, 58);
+          font-weight: 700;
+          color: $white;
+
+          span{
+            color: #2cc9ff;
+          }
+        }
+      }
+
+      .hero-paragraph{
+        p{
+          color: $tertiary;
+          @include rem-2(18, 22);
+
+          span{
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            color: #fca6a6cc;
+          }
+        }
+      }
+
+      .container-buttons{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+
+    .hero-image{
+      width: 100%;
+
+      .hero-container{
+        .hero-border{
+          width: 250px;
+          height: 250px;
+          margin: 0 auto;
+          border: 3px solid #FFF;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md){
+  .hero{
+    padding: 40px 0;
+
+    .hero-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 -15px;
+      transform: translateY(-15%);
+
+      .hero-text{
+        order: 1;
+        width: 60%;
+        padding: 0 15px;
+        margin: 0;
+      }
+
+      .hero-image{
+        order: 2;
+        width: 40%;
+        padding: 0 15px;
+        position: relative;
+
+        .hero-container{
+          .hero-border{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            z-index: 2;
+            animation: float 4s ease-in-out infinite;
+            border-radius: 50%;
+          }
+
+          .shadow{
+            width: 75px;
+            height: 20px;
+            background-color: $white;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: expand 4s infinite;
+            position: absolute;
+            bottom: -10px;
+            right: 41%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .hero{
+    .hero-row{
+      .hero-text{
+        .hero-title{
+          p{
+            @include rem-2(24, 30);
+          }
+
+          h1{
+            @include rem-2(65, 60);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Animations
+ */
+@keyframes float {
+  0%{
+    transform: translateY(0px);
+  } 50% {
+    transform: translateY(-70px);
+  } 100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0%, 100% {
+    transform: scale(1);
+  } 50% {
+    transform: scale(0.5);
+  }
+}

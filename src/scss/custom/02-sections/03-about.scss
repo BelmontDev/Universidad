@@ -1,0 +1,166 @@
+.about{
+  padding: 40px 0px;
+
+  .about-row{
+    display: flex;
+    flex-wrap: wrap;
+    @include adyacent-top(60px);
+
+    .about-col{
+      @include adyacent-top(20px);
+
+      .title{
+        color: $white;
+
+        h2{
+          @include rem-2(35, 37);
+        }
+      }
+
+      .text{
+        color: $tertiary;
+        @include adyacent-top(20px);
+      }
+    }
+
+    .experience-col{
+      width: 100%;
+      @include adyacent-top(25px);
+
+      .title{
+        color: $white;
+        position: relative;
+        display: inline-block;
+
+        h2{
+          @include rem-2(35, 37);
+        }
+
+        &::after{
+          content: "";
+          display: block;
+          height: 25px;
+          width: 25px;
+          fill: currentcolor;
+          background: #ffff00;
+          position: absolute;
+          top: 0;
+          right: -27px;
+          @include mask-image(url('../img/icons/shine.svg'));
+          @include mask-size(25px 25px);
+          @include mask-repeat(no-repeat);
+          @include mask-position(center center);
+        }
+      }
+
+      .experience-container{
+        position: relative;
+        overflow: hidden;
+        @include adyacent-top(25px);
+
+        .experience-wrapper{
+          display: flex;
+          justify-content: space-between;
+          @include adyacent-left(25px);
+
+          .experience-icon{
+            width: 24px;
+            height: 24px;
+            background-color: $secondary;
+            color: #def3ff;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 3px;
+
+            svg{
+              width: 15px;
+              height: 15px;
+            }
+
+            &::after{
+              content: "";
+              background-color: #334155;
+              width: 1px;
+              height: 1000%;
+              position: absolute;
+              display: block;
+              z-index: -1;
+              top: 0;
+            }
+          }
+
+          .experience-content{
+            width: 92%;
+            display: inline-block;
+
+            .experience-title{
+              display: inline-block;
+
+              .experience-title-position{
+                display: inline-block;
+                color: $primary;
+                @include rem-2(18, 28);
+              }
+
+              .experience-title-separator{
+                color: $white;
+              }
+
+              .experience-title-company{
+                color: #ffb272e6;
+                @include rem-2(14, 20);
+              }
+
+            }
+
+            .experience-time{
+              margin-top: 10px;
+              color: #b6eaffe6;
+            }
+
+            .experience-description{
+              margin-top: 15px;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .about{
+    .about-row{
+      margin: 0 -15px;
+
+      > * {
+        padding: 0 15px;
+      }
+
+      .about-col{
+        width: 50%;
+
+        .title{
+          h2{
+            @include rem-2(40, 47);
+          }
+        }
+      }
+
+      .experience-col{
+        width: 50%;
+        margin: 0;
+
+        .title{
+          h2{
+            @include rem-2(40, 47);
+          }
+        }
+      }
+    }
+  }
+}

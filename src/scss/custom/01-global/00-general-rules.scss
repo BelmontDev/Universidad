@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, span, div{
+  word-break: break-word;
+}
+
+body{
+  background: url(/img/icons/bg-page.svg);
+  background-color: #0e1015;
+}
+
+img, svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn{
+  transition: all 0.3s;
+}
+
+.btn-social{
+  padding: 8px 16px;
+  color: #93a2b5;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 23px;
+  border: solid 1px #93a2b5;
+  @include adyacent-left(8px);
+  transition: all 0.3s;
+
+  &:hover{
+    color: $primary;
+    border-color: $primary;
+  }
+
+  .icon-social{
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-link{
+    width: 16px;
+    height: 16px;
+  }
+}
