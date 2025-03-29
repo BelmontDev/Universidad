@@ -13,7 +13,6 @@ Este repositorio tiene como objetivo centralizar los proyectos de código abiert
 - **Git**
 
 ## Instalación
-
 Para comenzar a trabajar con los proyectos de este repositorio, sigue estos pasos:
 
 1. **Clona el repositorio**:
@@ -21,13 +20,17 @@ Para comenzar a trabajar con los proyectos de este repositorio, sigue estos paso
    ```bash
    git clone https://github.com/usuario/universidad-xyz.git
    cd universidad-xyz
+   ```
 
 2. **Instala las dependencias**
    ```bash
-   cd src
+    cd src
+   ```
+   ```bash
+     npm install
+   ```
 
-  ```bash
-    npm install
+---
 
 >[!WARNING] 
 >Necesitaras las siguientes versiones:
