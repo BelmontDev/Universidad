@@ -1,9 +1,2 @@
-.DS_Store
-Thumbs.db
 
-*.html
-*.css
-*.css.map
-
-node_modules
 package-lock.json
