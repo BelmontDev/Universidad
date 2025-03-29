@@ -18,8 +18,8 @@ Para comenzar a trabajar con los proyectos de este repositorio, sigue estos paso
 1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/usuario/universidad-xyz.git
-   cd universidad-xyz
+   git clone https://github.com/BelmontDev/Universidad.git
+   cd Universidad
    ```
 
 2. **Instala las dependencias**
